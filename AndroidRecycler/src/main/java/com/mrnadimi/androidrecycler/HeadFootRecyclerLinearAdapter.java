@@ -27,7 +27,7 @@ public abstract class HeadFootRecyclerLinearAdapter<T extends RecyclerView.ViewH
     protected static final int VIEW_TYPE_HEADER = 2;
     protected static final int VIEW_TYPE_FOOTER = 3;
 
-    private List<E> data;
+    private final List<E> data;
 
 
     protected final View header, footer;
@@ -131,7 +131,7 @@ public abstract class HeadFootRecyclerLinearAdapter<T extends RecyclerView.ViewH
 
     public void setItems(List<E> data){
         this.data.clear();
-        this.data = data;
+        this.data.addAll(data);
         notifyDataSetChanged();
     }
 

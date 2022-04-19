@@ -20,7 +20,7 @@ public abstract class LinearRecycleAdapter<T extends RecyclerView.ViewHolder , E
 
     private static final int VIEW_TYPE_ITEM = 1;
 
-    private List<E> data;
+    private final List<E> data;
 
     public LinearRecycleAdapter() {
         data = new ArrayList<>();
@@ -54,7 +54,7 @@ public abstract class LinearRecycleAdapter<T extends RecyclerView.ViewHolder , E
 
     public void setItems(List<E> data){
         this.data.clear();
-        this.data = data;
+        this.data.addAll(data);
         notifyDataSetChanged();
     }
 
