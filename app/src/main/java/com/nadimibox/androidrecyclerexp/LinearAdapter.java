@@ -1,4 +1,4 @@
-package com.mrnadimi.androidrecyclerexp;
+package com.nadimibox.androidrecyclerexp;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-import com.mrnadimi.androidrecycler.LinearRecycleAdapter;
+import com.nadimibox.androidrecycler.LinearRecycleAdapter;
 
 import org.jetbrains.annotations.NotNull;
 

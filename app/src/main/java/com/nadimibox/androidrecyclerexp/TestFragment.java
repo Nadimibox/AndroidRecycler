@@ -1,4 +1,4 @@
-package com.mrnadimi.androidrecyclerexp;
+package com.nadimibox.androidrecyclerexp;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.mrnadimi.androidfragment.LiteFragment;
+import com.nadimibox.androidfragment.LiteFragment;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -31,10 +31,11 @@ public class TestFragment extends LiteFragment {
     public View onCreateRootView(@NonNull @NotNull LayoutInflater inflater, @Nullable @org.jetbrains.annotations.Nullable ViewGroup container, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_main, container, false);
 
-        View header = LayoutInflater.from(inflater.getContext()).inflate(R.layout.header_layout, null , false);
-        View footer = LayoutInflater.from(inflater.getContext()).inflate(R.layout.footer_layout, null , false);
-        GridAdapter linearAdapter =
-                new GridAdapter(/*header ,footer ,*/ 3);
+        RecyclerView recyclerView = v.findViewById(R.id.recycle);
+        View header = LayoutInflater.from(inflater.getContext()).inflate(R.layout.header_layout, container , false);
+        View footer = LayoutInflater.from(inflater.getContext()).inflate(R.layout.footer_layout, container , false);
+        LinearHeadFootRecyclerAdapter linearAdapter =
+                new LinearHeadFootRecyclerAdapter(header ,footer );
 
         List<String> aaaa = new ArrayList<>();
         aaaa.add("aaa");
@@ -70,7 +71,7 @@ public class TestFragment extends LiteFragment {
         aaaa.add("fff");
 
 
-        RecyclerView recyclerView = v.findViewById(R.id.recycle);
+
         recyclerView.setLayoutManager(linearAdapter.getLayoutManager(requireContext()));
         recyclerView.setAdapter(linearAdapter);
 
@@ -82,7 +83,7 @@ public class TestFragment extends LiteFragment {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //linearAdapter.toggleHeader();
+                linearAdapter.toggleHeader();
                 //linearAdapter.toggleFooter();
                 linearAdapter.addItems(aaaa);
             }

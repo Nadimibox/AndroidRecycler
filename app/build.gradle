@@ -3,12 +3,13 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    namespace = 'com.nadimibox.androidrecyclerexp'
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.mrnadimi.androidrecyclerexp"
         minSdk 21
-        targetSdk 32
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -22,8 +23,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 }
 
@@ -38,6 +39,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
 
-    implementation 'com.github.MrNadimi:AndroidFragment:1.0.0'
+    implementation 'com.github.Nadimibox:AndroidFragment:1.0.3'
     implementation group: 'org.jetbrains', name: 'annotations', version: '23.0.0'
 }

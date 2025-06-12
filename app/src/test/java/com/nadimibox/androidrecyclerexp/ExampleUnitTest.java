@@ -1,4 +1,4 @@
-package com.mrnadimi.androidrecycler;
+package com.nadimibox.androidrecyclerexp;
 
 import org.junit.Test;
 

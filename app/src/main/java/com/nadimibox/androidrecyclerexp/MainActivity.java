@@ -1,10 +1,10 @@
-package com.mrnadimi.androidrecyclerexp;
+package com.nadimibox.androidrecyclerexp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.mrnadimi.androidfragment.FragmentUtils;
+import com.nadimibox.androidfragment.FragmentUtils;
 
 public class MainActivity extends AppCompatActivity {
 

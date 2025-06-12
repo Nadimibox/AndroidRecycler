@@ -1,4 +1,4 @@
-package com.mrnadimi.androidrecycler;
+package com.nadimibox.androidrecycler;
 
 import android.view.View;
 import android.view.ViewGroup;

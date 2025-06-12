@@ -1,4 +1,4 @@
-package com.mrnadimi.androidrecycler;
+package com.nadimibox.androidrecyclerexp;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.mrnadimi.androidrecycler.test", appContext.getPackageName());
+        assertEquals("com.mrnadimi.androidrecyclerexp", appContext.getPackageName());
     }
 }

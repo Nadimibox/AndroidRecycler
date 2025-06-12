@@ -1,4 +1,4 @@
-package com.mrnadimi.androidrecycler;
+package com.nadimibox.androidrecycler;
 
 import android.content.Context;
 import android.view.View;
@@ -122,6 +122,16 @@ public abstract class HeadFootRecyclerLinearAdapter<T extends RecyclerView.ViewH
         return position;
     }
 
+    /**
+     *
+     * @return The @See {@link LinearLayoutManager} is kill the header and footer width
+     * https://stackoverflow.com/questions/35904409/item-in-recyclerview-not-filling-its-width-match-parent
+     *
+     * We can fix that with https://stackoverflow.com/a/30692398/6098741
+     *
+     * Note: just {@link LinearLayoutManager} has this bug and {@link androidx.recyclerview.widget.GridLayoutManager} is perfectly work
+     *
+     */
     @Override
     public RecyclerView.LayoutManager getLayoutManager(Context context) {
         LinearLayoutManager llm = new LinearLayoutManager(context);

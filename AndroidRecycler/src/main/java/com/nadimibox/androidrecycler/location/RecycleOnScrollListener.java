@@ -1,4 +1,4 @@
-package com.mrnadimi.androidrecycler.location;
+package com.nadimibox.androidrecycler.location;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
