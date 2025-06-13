@@ -16,6 +16,6 @@ repositories {
 ```` 
 dependencies {
       ...
-      implementation 'com.github.Nadimibox:AndroidRecycler:1.0.3'
+      implementation 'com.github.Nadimibox:AndroidRecycler:1.0.5'
 }
 ````
